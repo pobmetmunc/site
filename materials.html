@@ -1,0 +1,140 @@
+<!--html-->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+  <meta content='maximum-scale=1.0, initial-scale=1.0, width=device-width' name='viewport'>
+  <title>Conference Materials</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark blueNav">
+  <a class="navbar-brand title" href="index.html"> <img class = "headerImage" src="images/homeIcon.svg.png" alt="">METMUNC</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="nav navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link navItems" href="about.html">About Us</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItems" href="materials.html">Conference Materials</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItems" href="conference program/program.html">Conference Program</a>
+      </li>
+      <li class="nav-item">
+        <a class="nav-link navItems" href="contact.html">Contact Us</a>
+      </li>
+    </ul>
+  </div>
+</nav>
+<br>
+<br>
+
+<input type="text" id="myInput" onkeyup="searchFor()" placeholder="Search for committee... ">
+
+<table id="myTable">
+  <tr class="header">
+    <th style="width:20%;">Committee</th>
+    <th style="width:60%;">Information</th>
+    <th style="width:20%;">Links</th>
+  </tr>
+  <tr>
+    <td>North Atlantic Treaty Organization (NATO)</td>
+    <td>Chairs: Joshua Feller and Leah Reed</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>United Nations Conference on Trade and Development (UNCTAD)</td>
+    <td>Chairs: Olivia Schimdt, Skylar Cowen, Ari Kalinsky</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>Security Council</td>
+    <td>Chairs: Smit Kothari and Danny Reiss</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>United Nations Human Rights Council (UNHRC)</td>
+    <td>Chairs: Isabel Lagnado, Kasha Bhatia, Hannah Quintin</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>World Health Organization (WHO)</td>
+    <td>Chairs: Brian Lee and Jake Atkin</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>United Nations Economic and Social Council (ECOSOC)</td>
+    <td>Chairs: Jasbina Sabharwal, Abigail Ruthen, Noah Bernstein</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>U.S. Space Force</td>
+    <td>Chairs: Dara Neumann and Kenny Fischer</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>UN Women</td>
+    <td>Chairs: Lauren Eterno, Jenna Rabin, Max Leibowitz</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>United Nations Environment Programme (UNEP)</td>
+    <td>Chairs: Alyssa Reiss, Stein Philip, Jessica Klein</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>United Nations Office on Drugs and Crime (UNODC)</td>
+    <td>Chairs: Ben DeMarinis and Amanda Kang</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>Arab League</td>
+    <td>Chairs: Chris Tzimopoulos and Aidan Atkin</td>
+    <td>Link</td>
+  </tr>
+  <tr>
+    <td>UK Parliament</td>
+    <td>Chairs: Aidan Davis and Simran Goraya</td>
+    <td>Link</td>
+  </tr>
+</table>
+
+
+<script>
+function searchFor() {
+  // Declare variables
+  var input, filter, table, tr, td, i, txtValue;
+  input = document.getElementById("myInput");
+  filter = input.value.toUpperCase();
+  table = document.getElementById("myTable");
+  tr = table.getElementsByTagName("tr");
+
+  // Loop through all table rows, and hide those who don't match the search query
+  for (i = 0; i < tr.length; i++) {
+    td = tr[i].getElementsByTagName("td")[0];
+    if (td) {
+      txtValue = td.textContent || td.innerText;
+      if (txtValue.toUpperCase().indexOf(filter) > -1) {
+        tr[i].style.display = "";
+      } else {
+        tr[i].style.display = "none";
+      }
+    }
+  }
+}
+</script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+
+</html>

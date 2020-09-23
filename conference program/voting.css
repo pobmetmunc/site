@@ -1,0 +1,94 @@
+.div-result{
+  font-family: sans-serif;
+  text-align: center;
+  border: 1px solid black;
+  display: inline-block;
+  padding: 20px;
+  border-radius: 15px;
+  margin-bottom: 40px;
+  width: 50%;
+}
+
+.bar-control{
+  text-align: center;
+  width: 90%;
+}
+.btn-vote{
+  margin: 0 20px;
+  width: 200px;
+}
+.icon{
+  color: #008DB9;
+  font-size: 25px;
+  padding: 0 10px;
+  margin-right: 5px;
+}
+.icon:hover{
+  animation: animate-hover-icon 0.3s forwards;
+}
+.bar-control button{
+  background-color: #008DB9;
+  color: white;
+  font-size: 20px;
+  padding: 10px;
+  border: none;
+  border-radius: 10px;
+}
+.bar-control button:hover{
+  animation: animate-hover 0.3s forwards;
+}
+@keyframes animate-hover{
+  100%{background-color: #d1c66f;}
+}
+@keyframes animate-hover-icon{
+  100%{color: #d1c66f;}
+}
+.bar-control button:focus{
+  border: none;
+  outline: none;
+}
+.bar-control button:active{
+  filter: brightness(80%);
+}
+.toggle{
+  color: #008DB9;
+  font-size: 30px;
+  padding: 0 10px;
+}
+.toggle:hover{
+  animation: animate-hover-icon 0.3s forwards;
+}
+.table-voting{
+  margin: auto;
+}
+.table-voting td{
+  padding:0 20px;
+}
+.caption{
+  color: #008DB9;
+  font-family: sans-serif;
+}
+#btn-for:hover{
+   animation: animate-hover-green 0.3s forwards;
+}
+#btn-abstain:hover{
+  animation: animate-hover-yellow 0.3s forwards;
+}
+#btn-against:hover{
+  animation: animate-hover-red 0.3s forwards;
+}
+#btn-reset:hover{
+  animation: animate-hover-gray 0.3s forwards;
+}
+@keyframes animate-hover-green{
+  100%{background-color:#8adea8; color:#2a6e46}
+}
+@keyframes animate-hover-yellow{
+  100%{background-color:#dade8a; color: #6b6e3f}
+}
+@keyframes animate-hover-gray{
+  100%{background-color:#c4c4c4; color: #5e5e5e}
+}
+@keyframes animate-hover-red{
+  100%{background-color:#d67a6f; color: #73281f}
+}

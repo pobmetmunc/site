@@ -1,0 +1,125 @@
+nav{
+  z-index: 1;
+}
+.blueNav{
+  background-color: #008DB9;
+}
+.blurb{
+  padding: 20px;
+  margin: 20px;
+  margin-top: 20px;
+}
+.footerText{
+  text-align: center;
+  font-size: 15px;
+  color: gray;
+  margin-top: 50px;
+}
+.navItems{
+  font-family: "Montserrat", sans-serif;
+  color: #e1edf5;
+}
+.social-bar{
+  position: fixed;
+}
+.statistic{
+  width: 100%;
+  margin-bottom: 4px;
+  margin-top:40px;
+  font-size: 33%;
+  text-align: center;
+  background-color: #008DB9;
+  color: white;
+}
+.statisticCaption{
+  margin-top:0;
+  text-align: center;
+  color: #008DB9;
+}
+.title{
+  font-family: "Montserrat", sans-serif;
+  font-size: 1.5rem;
+}
+.headerImage{
+  filter: brightness(500%);
+  height: 2rem;
+  margin-right: 10px;
+  padding-bottom: 3px;
+}
+.headerAboveImage{
+  height:100px;
+  margin-bottom: 10px;
+}
+.heading{
+  color: #008DB9;
+}
+.underConstructionText{
+  text-align: center;
+  display: block;
+  padding: 10% 0%;
+
+}
+.topCarouselImg{
+  height: 400px;
+  object-fit: cover;
+}
+.blurbHeader{
+  text-align:center;
+  color:#005d7a;
+  font-size: 35px;
+}
+.special-text{
+  color:#008DB9;
+  font-weight: bold;
+}
+#topCarousel{
+  width: 100%;
+  height: 400px;
+}
+#countDown{
+  text-align: center;
+  color: white;
+  font-size: 30px;
+  background-color: #008DB9;
+}
+#countDownCaption{
+  text-align: center;
+  font-size: 15px;
+  color: grey;
+}
+#myInput {
+  width: 50%;
+  font-size: 16px;
+  padding: 12px 20px 12px 40px;
+  border: 2px solid #ddd;
+  margin-bottom: 30px;
+  margin-left: 5%;
+  background-image: url('images/searchicon.png');
+  background-position: 10px 12px;
+  background-repeat: no-repeat;
+}
+
+#myTable {
+  border-collapse: collapse;
+  width: 90%;
+  margin:auto;
+  border-radius: 20px;
+  border: 1px solid #ddd;
+  font-size: 18px;
+}
+#myTable th{
+  background-color:#008DB9;
+  color: white;
+}
+#myTable th, #myTable td {
+  text-align: left;
+  padding: 12px;
+}
+
+#myTable tr {
+  border-bottom: 1px solid #ddd;
+}
+
+#myTable tr.header, #myTable tr:hover {
+  background-color: #f1f1f1;
+}

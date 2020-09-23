@@ -1,0 +1,314 @@
+<!-- html -->
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title>Conference Program</title>
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.13.1/css/all.css" integrity="sha384-xxzQGERXS00kBmZW/6qxqJPyxW3UR0BPsL4c8ILaIWXva5kFi7TxkIIaMiKtqV1Q" crossorigin="anonymous">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="program.css">
+  <link rel="stylesheet" href="speakersList.css">
+  <link rel="stylesheet" href="timer.css">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="moderatedCaucus.css">
+  <link rel="stylesheet" href="voting.css">
+  <link rel="stylesheet" href="crisisList.css">
+  <link rel="stylesheet" href="helper.css">
+</head>
+
+<body>
+  <!-- Navigation Bar -->
+  <nav class="navbar navbar-expand-lg navbar-dark blueNav">
+    <a class="navbar-brand title" href="../index.html"> <img class="headerImage" src="../images/homeIcon.svg.png" alt="">METMUNC</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="nav navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link navItems" href="../about.html">About Us</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navItems" href="../materials.html">Conference Materials</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navItems" href="../conference program/program.html">Conference Program</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link navItems" href="../contact.html">Contact Us</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+  <br><br><br>
+  <div style="width: 95%; margin: 0 auto;">
+    <div class="container-fluid">
+      <h1 contentEditable id="committee-header">Name of Committee</h1>
+      <div class="row">
+        <!-- buttons -->
+        <div class="col-lg-1 col-md-2 col-sm-12">
+          <div class="row">
+            <div class="col-lg-12 col-md-2 col-sm-2 ctr">
+              <button id="btn-spk" class="program-button" type="button" name="button"><i class="fas fa-user-friends"></i></button>
+              <h6 class="button-caption">Speaker's List</h6>
+            </div>
+            <div class="col-lg-12 col-md-2 col-sm-2 ctr">
+              <button id="btn-mod" class="program-button" type="button" name="button"><i class="fas fa-gavel"></i></button>
+              <h6 class="button-caption">Moderated Caucus</h6>
+            </div>
+            <div class="col-lg-12 col-md-2 col-sm-2 ctr">
+              <button id="btn-unmod" class="program-button" type="button" name="button"><i class="fas fa-people-arrows"></i></button>
+              <h6 class="button-caption">Unmod. Caucus</h6>
+            </div>
+            <div class="col-lg-12 col-md-2 col-sm-2 ctr">
+              <button id="btn-voting" class="program-button" type="button" name="button"><i class="fas fa-vote-yea"></i></button>
+              <h6 class="button-caption">Voting Procedure</h6>
+            </div>
+            <div class="col-lg-12 col-md-2 col-sm-2 ctr">
+              <button id="btn-crisis" class="program-button" type="button" name="button"><i class="fas fa-exclamation-triangle"></i></button>
+              <h6 class="button-caption">Crisis</h6>
+            </div>
+            <div class="col-lg-12 col-md-2 col-sm-2 ctr">
+              <button id="btn-misc" class="program-button" type="button" name="button"><i class="fas fa-ellipsis-h"></i></button>
+              <h6 class="button-caption">Misc</h6>
+            </div>
+          </div>
+        </div>
+        <!-- Program Container -->
+        <div class="col-lg-11 col-md-10 col-sm-12 container-program" id="container-spk">
+          <div class="row align-items-center">
+            <div class="col-12 ">
+              <h1 class="section-header">Speaker's List</h1>
+            </div>
+            <!-- Moderated Caucus Section -->
+            <div id="container-moderated-caucus" class="col-lg-3 col-md-12 col-sm-12 widget-container">
+              <div class="module-moderated">
+                <input placeholder="Proposer Name" id="input-mod"></input>
+                <br><br>
+                <button class="btn-moderated" id="first-word">First Word</button>
+                <button class="btn-moderated" id="last-word">Last Word</button>
+              </div>
+            </div>
+            <!-- Timer Section -->
+            <div id="container-timer" class="col-lg-6 col-md-12 col-sm-12 widget-container">
+              <div class="time-display">00:30</div>
+              <div class="bar-holder">
+                <div class="bar-whole">
+                  <div class="bar-progress"></div>
+                </div>
+              </div>
+              <br>
+              <div class="bar-control">
+                <input class="time-input" placeholder="Input Time (mm:ss)"></input>
+                <!--  Pause and Play Buttons -->
+                <i class="fa fa-pause icon" id="pause-button" aria-hidden="true"></i>
+                <i class="fa fa-play icon" id="play-button" aria-hidden="true"></i>
+                <button class="set-time-button">Set Time</button>
+                <!-- Toggles -->
+                <br>
+                <br>
+                <div>
+                  <!-- Smooth Animation -->
+                  <i class="fas fa-toggle-off toggle" id="toggle-smooth"></i>
+                  <span class="caption">Smooth Anim.</span>
+                  <br>
+                  <!-- 5s Warning -->
+                  <i class="fas fa-toggle-off toggle" id="toggle-warning"></i>
+                  <span class="caption">Red Bar at 5s</span>
+                </div>
+              </div>
+            </div>
+            <!-- Speakers List Section -->
+            <div id="container-speaker-list" class="col-lg-6 col-md-12 col-sm-12 widget-container">
+              <div style="text-align: left">
+                <h1 class="speaker-current">Current Speaker</h1>
+                <h2 class="speaker-next">Next Speaker</h2>
+              </div>
+              <div class="speakers-list">
+
+              </div>
+              <br>
+              <button class="btn-box" id="btn-next-speaker">Next Speaker</button>
+              <button class="btn-box" id="btn-edit-master">Edit Master List</button>
+              <br>
+
+              <!-- Add -->
+              <input id="input-add-new-speaker" placeholder="Add New Nation(s)"></input>
+              <button class="btn-plus" id="btn-add-new-speaker">+</button>
+
+              <input placeholder="Add Speaker" id="input-add-default" list="speaker-defaults">
+              <button class="btn-plus" id="btn-add-default">+</button>
+              <datalist id="speaker-defaults">
+              </datalist>
+              <!-- Master List -->
+              <div class="pop-up" id="pop-up-master-list">
+                <div id="master-list-container">MASTER <i class="fas fa-user-secret icon-secret"></i> LIST<p contentEditable id="master-list"></p>
+                </div>
+                <button class="btn-box" id="btn-master-list">Update List</button>
+              </div>
+            </div>
+            <!-- Crisis Speakers List -->
+            <div id="container-speaker-list-crisis" class="col-lg-6 col-md-12 col-sm-12 widget-container">
+              <div style="text-align: left">
+                <h1 class="speaker-current-crisis">Current Speaker</h1>
+                <h2 class="speaker-next-crisis">Next Speaker</h2>
+              </div>
+              <div class="speakers-list-crisis">
+
+              </div>
+              <br>
+              <button class="btn-box-crisis" id="btn-next-speaker-crisis">Next Speaker</button>
+              <button class="btn-box-crisis" id="btn-edit-master-crisis">Edit Master List</button>
+              <br>
+
+              <!-- Add -->
+              <input id="input-add-new-speaker-crisis" placeholder="Add New Country"></input>
+              <button class="btn-plus-crisis" id="btn-add-new-speaker-crisis">+</button>
+
+              <input placeholder="Add Speaker" id="input-add-default-crisis" list="speaker-defaults-crisis">
+              <button class="btn-plus-crisis" id="btn-add-default-crisis">+</button>
+              <datalist id="speaker-defaults-crisis">
+              </datalist>
+              <!-- Master List -->
+              <div class="pop-up-crisis" id="pop-up-master-list-crisis">
+                <div id="master-list-container-crisis">MASTER <i class="fas fa-user-secret icon-secret-crisis"></i> LIST<p contentEditable id="master-list-crisis"></p>
+                </div>
+                <button class="btn-box-crisis" id="btn-master-list-crisis">Update Crisis List</button>
+              </div>
+            </div>
+            <!-- Voting Procedure -->
+            <div id="container-voting-procedure" class="col-12 widget-container">
+              <div class="voting-module">
+                <div class="bar-control">
+                  <div class="div-result">
+                    <table class="table-voting">
+                      <tr>
+                        <td>
+                          <h1>For:</h1>
+                        </td>
+                        <td>
+                          <h1><span class="count" id="count-for">0</span></h1>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h1>Against: </h1>
+                        </td>
+                        <td>
+                          <h1><span class="count" id="count-against">0</span></h1>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h2 style="font-size:25px">Abstained:
+                        </td>
+                        <td>
+                          <h2 style="font-size:25px"><span class="count" id="count-abstain">0</span></h2>
+                        </td>
+                      </tr>
+                      <tr>
+                        <td>
+                          <h2 style="font-size:25px">Total:</h2>
+                        </td>
+                        <td>
+                          <h2 style="font-size:25px"><span id="count-total">0</span></h2>
+                        </td>
+                      </tr>
+                      <tr id="count-simple-container">
+                        <td>
+                          <h2 style="font-size:18px">Simple Majority:</h2>
+                        </td>
+                        <td>
+                          <h2 style="font-size:18px"><span id="count-simple">0</span></h2>
+                        </td>
+                      </tr>
+                      <tr id="count-super-container">
+                        <td>
+                          <h2 style="font-size:18px">Super Majority:</h2>
+                        </td>
+                        <td>
+                          <h2 style="font-size:18px"><span id="count-super">0</span></h2>
+                        </td>
+                      </tr>
+                    </table>
+                  </div>
+                  <!-- Voting Buttons-->
+                  <br>
+                  <button class="btn-vote" id="btn-for">For</button>
+                  <button class="btn-vote" id="btn-abstain">Abstain</button>
+                  <button class="btn-vote" id="btn-against">Against</button>
+                  <button class="btn-vote" id="btn-reset">Reset</button>
+                  <br><br>
+                  <!-- Set Number of Voters -->
+                  <div>
+                    <input placeholder="Set Number of Voters" id="input-set-total-voters"></input>
+                    <button id="btn-set-total-voters" class="btn-plus">+</button>
+                    <input placeholder="Set Custom Emoji" id="input-set-custom-hider"></input>
+                    <button id="btn-set-custom-hider" class="btn-plus">✓ </button>
+                  </div>
+                  <table style="margin:20px auto">
+                    <tr>
+                      <td><i class="fas fa-toggle-off toggle" id="toggle-votes"></i></td>
+                      <td><span class="caption">Hide Total Votes</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-toggle-off toggle" id="toggle-emoji"></i></td>
+                      <td><span class="caption">Hide with Emoji</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-toggle-off toggle" id="toggle-simple-majority"></i></td>
+                      <td><span class="caption">Show Simple Majority >(1/2)</span></td>
+                    </tr>
+                    <tr>
+                      <td><i class="fas fa-toggle-off toggle" id="toggle-super-majority"></i></td>
+                      <td><span class="caption">Show Super Majority >(2/3)</span></td>
+                    </tr>
+                  </table>
+                </div>
+              </div>
+            </div>
+            <!-- Helper Module -->
+            <button class="btn-helper"><i class="fas fa-user-secret"></i></button>
+            <div class="module-helper">
+              <img src="../images/munbot.gif" class="img-icon"></img>
+              <p class="helper-text">Hi there, my name is MUN-BOT! Type help to see what I can do for you.</p>
+              <input class="helper-input" placeholder="Type Here"></input>
+              <div class="module-helper-output">
+
+              </div>
+            </div>
+            <div class="large-display">
+              <p contenteditable="true">Type something here. To make the box moveable, click the drag icon (while dragging, you cannot change the text)</p><i class="fa fa-times x-out-helper-display"></i><i
+                class="fas fa-arrows-alt drag-helper-display"></i>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+  </div>
+  <br><br>
+  <footer style="text-align:center">
+    <p style="color: gray">
+      Designed by Ronald Cheng :)
+    </p>
+    <br><br>
+  </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <script src="./speakersList.js" charset="utf-8"></script>
+  <script src="./crisisList.js" charset="utf-8"></script>
+  <script src="./moderatedCaucus.js" charset="utf-8"></script>
+  <script src="./timer.js" charset="utf-8"></script>
+  <script src="./voting.js" charset="utf-8"></script>
+  <script src="./helper.js" charset="utf-8"></script>
+  <script src="./program.js" charset="utf-8"></script>
+</body>
+
+</html>

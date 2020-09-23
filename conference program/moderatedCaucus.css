@@ -1,0 +1,32 @@
+.btn-moderated{
+  display: inline-block;
+  border: 1px solid black;
+  margin: 0;
+  margin-left: -5px;
+  padding: 10px;
+  font-size: 20px;
+  font-family: sans-serif;
+  background-color: white;
+}
+.btn-moderated:hover{
+  animation: blue-hover 0.3s forwards;
+}
+.btn-moderated:focus{
+  outline: none;
+}
+#first-word{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+#last-word{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+@keyframes blue-hover{
+  to{color:#afd2e3;border-color: #008DB9;}
+}
+#input-mod{
+  text-align: center;
+  font-size: 30px;
+  font-family: "Montserrat", sans-serif;
+}

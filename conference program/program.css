@@ -1,0 +1,75 @@
+.button-caption{
+  text-align: center;
+}
+.container-program{
+  border: 1px solid black;
+  border-radius: 10px;
+  padding: 30px;
+  position: relative;
+}
+.ctr{
+  text-align: center;
+}
+
+.program-button{
+  color: white;
+  width: 60px;
+  height: 60px;
+  font-size: 20px;
+  border-radius: 100%;
+  background-color: gray;
+  border: none;
+}
+.program-button:hover{
+  animation: btn-hover 0.5s forwards;
+}
+@keyframes btn-hover{
+  100%{width: 65px; height: 65px}
+}
+.program-button:active{
+  background-color:#E98C36;
+}
+.program-button:focus{
+  outline: none;
+}
+.program-button-active{
+  border: 2px solid #E98C36;
+  color:#E98C36;
+}
+.section-header{
+  color: gray;
+  font-family: "Montserrat", sans-serif;
+  padding: 10px;
+}
+.timer-text{
+  color: #008DB9;
+  text-align: center;
+}
+.widget-container{
+  text-align: center;
+}
+#btn-spk{
+  background-color: #B4EFE4;
+}
+#btn-mod{
+  background-color: #8DD5E5;
+}
+#btn-unmod{
+  background-color: #adc6de;
+}
+#btn-voting{
+  background-color: #d1ccf0;
+}
+#btn-crisis{
+  background-color: #f7c3c1;
+}
+#btn-misc{
+  background-color: #e2d8e3;
+}
+#committee-header{
+  color: gray;
+  font-size: 40px;
+  position: absolute;
+  left: 150px;
+  top: 70px;
+}

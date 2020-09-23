@@ -1,0 +1,114 @@
+.btn-box-crisis{
+  padding: 10px;
+  font-size: 20px;
+  background-color:#008DB9;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  margin: 0 10px 20px 10px;
+}
+.btn-plus-crisis{
+  border-radius: 100%;
+  border:none;
+  width: 30px;
+  height: 30px;
+  background-color: #008DB9;
+  font-size: 25px;
+  color: white;
+  line-height:0;
+}
+.btn-plus-crisis:focus{
+  outline: none;
+  background-color: #99d194;
+}
+@keyframes btn-hover{
+  to{background-color: #d1c66f}
+}
+.close-icon-crisis{
+  font-size: 20px;
+  color: #008DB9;
+  position: absolute;
+  right: 20px;
+  top: 0;
+}
+.close-icon-crisis: hover{
+  animation: close-icon-hover-black 0.3s forwards;
+}
+.close-icon-crisis: hover + p{
+  animation: close-icon-hover-black 0.3s forwards;
+}
+@keyframes close-icon-hover-black{
+  to{color: black}
+}
+.icon-secret-crisis{
+  font-size: 30px;
+  color: #92c3d6;
+  filter: hue-rotate(160deg);
+}
+.icon-secret-crisis:hover{
+  animation: icon-secret-hover 0.3s forwards;
+}
+.icon-secret-crisis:focus{
+  color: blue;
+}
+@keyframes icon-secret-hover{
+  to{color: white;}
+}
+.pop-up-crisis{
+  border: 1px solid black;
+  position: fixed;
+  width: 300px;
+  height: 300px;
+  right: 10px;
+  bottom: 10px;
+  background-color: white;
+  text-align: center;
+  display: none;
+  border-radius: 10px;
+}
+.speakers-list-crisis{
+  height: 250px;
+  width: 95%;
+  margin: auto;
+  overflow-y: auto;
+  border-bottom: 2px solid #008DB9;
+  position: relative;
+  background-color:#e6f1f5;
+  filter: hue-rotate(160deg);
+}
+.speakers-list-queue-crisis{
+  position: relative;
+  border-bottom: 1px solid #008DB9;
+  font-family: sans-serif;
+  width: 70%;
+  margin-left: 3%;
+  margin-bottom: 0;
+  padding: none;
+  text-align: left;
+}
+.speakers-list-queue-crisis p{
+  margin: 8px 10px;
+  color: #205480;
+  filter: hue-rotate(160deg);
+}
+.speaker-current-crisis{
+  font-family: "Montserrat", sans-serif;
+  text-decoration: underline;
+  font-size: 55px;
+}
+.speaker-next-crisis{
+  font-family: "Montserrat", sans-serif;
+  font-weigth: normal;
+  color: gray;
+}
+#master-list-container-crisis{
+  border: 1px solid black;
+  height: 60%;
+  margin: 20px;
+  background-color: black;
+  color: white;
+  font-family: monospace;
+  font-size: 16px;
+  padding: 6px;
+  overflow-y: auto;
+}
