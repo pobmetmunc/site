@@ -166,7 +166,7 @@ function createReminder(value){
 }
 // create a note
 function createNote(){
-  let note = `<div contentEditable class="helper-output helper-note"><i class="fa fa-times x-out-helper"></i>
+  let note = `<div class="helper-output helper-note"><p contentEditable></p><i class="fa fa-times x-out-helper"></i>
     </div>`
   output.append(note)
 }
@@ -194,6 +194,9 @@ function copyText(element) {
  document.execCommand("copy");
  $temp.remove();
 }
+$(".copiable").click(function(){
+  copyText($(this))
+})
 // add input to top input on click
 function addInput(value){
   $(".helper-input").val(value)

@@ -72,6 +72,13 @@ nav{
   color:#008DB9;
   font-weight: bold;
 }
+.copiable:hover{
+  background-color: #008DB9;
+  color: white;
+}
+.copiable:active{
+  background-color: #d4c570;
+}
 #topCarousel{
   width: 100%;
   height: 400px;
