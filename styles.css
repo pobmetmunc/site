@@ -1,6 +1,9 @@
 nav{
   z-index: 1;
 }
+a{
+  color:#008DB9;
+}
 .blueNav{
   background-color: #008DB9;
 }
@@ -94,7 +97,7 @@ nav{
   font-size: 15px;
   color: grey;
 }
-#myInput {
+#search {
   width: 50%;
   font-size: 16px;
   padding: 12px 20px 12px 40px;
@@ -106,7 +109,7 @@ nav{
   background-repeat: no-repeat;
 }
 
-#myTable {
+#committeeTable {
   border-collapse: collapse;
   width: 90%;
   margin:auto;
@@ -114,19 +117,26 @@ nav{
   border: 1px solid #ddd;
   font-size: 18px;
 }
-#myTable th{
+#committeeTable th{
   background-color:#008DB9;
   color: white;
 }
-#myTable th, #myTable td {
+#committeeTable th, #committeeTable td {
   text-align: left;
   padding: 12px;
 }
 
-#myTable tr {
+#committeeTable tr {
   border-bottom: 1px solid #ddd;
 }
 
 #myTable tr.header, #myTable tr:hover {
   background-color: #f1f1f1;
+}
+.header{
+  font-family:'Montserrat', sans-serif;
+  text-align: center;
+}
+.fa-user{
+  margin-right: 5px;
 }

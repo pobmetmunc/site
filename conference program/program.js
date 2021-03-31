@@ -5,8 +5,6 @@ if(checkPass === null || encryptPass(checkPass)!="302AED326AED305AED122AED125AED
     window.location.replace("https://pobmetmunc.github.io/site/index.html")
 }
 
-
-
 // Add Styling for button click
 $(".program-button").click(function(){
   $(".program-button").removeClass("program-button-active");
