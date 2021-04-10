@@ -15,7 +15,7 @@ function addEventListenerCrisisClose(){
   })
 }
 // Committees
-let committeeCountryLists = {
+let committeeCountryListsCrisis = {
   "NATO": ['United States', 'Turkey', 'Greece', 'Ukraine', 'UK', 'France', 'Poland', 'Germany', 'Estonia', 'Latvia', 'Lithuania', 'North Macedonia', 'Bulgaria', 'Hungary', 'Romania', 'Spain', 'Italy', 'Canada', 'Denmark', 'Belgium', 'Netherlands', 'Portugal', 'Albania', 'Montenegro', 'Czech', 'Republic', 'Slovakia', 'Slovenia', 'Norway'],
   "UNCTAD":  ['Canada', 'Russia', 'United States', 'Venezuela', 'Egypt', 'China', 'UK', 'Bolivia', 'Norway', 'Saudi Arabia', 'DPRK', 'Panama', 'Nigeria', 'India', 'France', 'Denmark', 'Angola', 'Chile', 'Malaysia', 'Indonesia', 'Afghanistan', 'Australia', 'New Zealand', 'Brazil', 'Uganda', 'South Korea', 'Japan', 'Botswana', 'UAE'],
   "UNHRC":['Yemen', 'USA', 'Saudi Arabia', 'Syria', 'UK', 'Brazil', 'Venezuela', 'India', 'Nigeria', 'Philippines', 'France', 'Iran', 'Belgium', 'Italy', 'Sweden', 'Switzerland', 'Denmark', 'Germany', 'Afghanistan', 'Turkey', 'Pakistan', 'Ghana', 'Egypt', 'Bangladesh', 'Kenya', 'Japan', 'China', 'DPRK (North Korea)', 'South Korea'],
@@ -26,7 +26,7 @@ let committeeCountryLists = {
   "Arab League":["Algeriia","Bahrain","Comoros","Dijbouti","Egypt","Iraq","Jordan","Kuwait","Lebanon","Mauritania","Morocco","Oman","Qatar","Saudi Arabia","Somalia","Sudan","Syria","Tunisia","United Arab Emirates","Yemen"],
   "BHOC": ['Boris Johnson (Con)', 'Rishi Sunak (Con)', 'Dominic Raab (Con)', 'Priti Patel (Con)', 'Jacob Rees Mogg (Con)', 'David Davis (Con)', 'Keir Starmer (Lab)', 'Lisa Nandy (Lab)', 'Jeremy Corbyn (Lab)', 'Ian Blackford (SNP)', 'Edward Davey (LibDem)', 'Theresa May (Con)', 'Yvette Cooper (Lab)', 'Joy Morrissey (Con)', 'Angela Rayner (Lab)', 'Michael Gove (Con)', 'Colum Easwood (SDLP)', 'Damian Green (Con)', 'John McDonnell (Lab)', 'Ben Wallace (Con)', 'Christopher Chope (Con)', 'Anneliese Dodds (Lab)', 'Robert Buckland (Con)', 'Jeffrey Donaldson (DUP)', 'Johnny Mercer (Con)', 'Harriet Harman (Lab)', 'Kirsty Blackman (SNP)', 'Brandon Lewis (Con)', 'David Lammy (Lab)', 'Imran Ahmad Khan (Con)', 'Alister Jack (Con)', 'Mark Jenkinson (Con)', 'Paula Barker (Lab)', 'Dehenna Davison (Con)']
 }
-let committee = $("committee-header").html()
+let committeeCrisis = $("committee-header").html()
 
 //update the html to reflect changes to the list
 function updateCrisisHTML(list){
