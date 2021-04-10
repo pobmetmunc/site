@@ -27,7 +27,9 @@ let committeeCountryListsCrisis = {
   "BHOC": ['Boris Johnson (Con)', 'Rishi Sunak (Con)', 'Dominic Raab (Con)', 'Priti Patel (Con)', 'Jacob Rees Mogg (Con)', 'David Davis (Con)', 'Keir Starmer (Lab)', 'Lisa Nandy (Lab)', 'Jeremy Corbyn (Lab)', 'Ian Blackford (SNP)', 'Edward Davey (LibDem)', 'Theresa May (Con)', 'Yvette Cooper (Lab)', 'Joy Morrissey (Con)', 'Angela Rayner (Lab)', 'Michael Gove (Con)', 'Colum Easwood (SDLP)', 'Damian Green (Con)', 'John McDonnell (Lab)', 'Ben Wallace (Con)', 'Christopher Chope (Con)', 'Anneliese Dodds (Lab)', 'Robert Buckland (Con)', 'Jeffrey Donaldson (DUP)', 'Johnny Mercer (Con)', 'Harriet Harman (Lab)', 'Kirsty Blackman (SNP)', 'Brandon Lewis (Con)', 'David Lammy (Lab)', 'Imran Ahmad Khan (Con)', 'Alister Jack (Con)', 'Mark Jenkinson (Con)', 'Paula Barker (Lab)', 'Dehenna Davison (Con)']
 }
 let committeeCrisis = $("committee-header").html()
-
+committeeCountryListsCrisis[committeeCrisis].forEach(function(country){
+  $("#speaker-defaults").append(`<option value="${country}"></option>`)
+})
 //update the html to reflect changes to the list
 function updateCrisisHTML(list){
   if(list.length < 1){
