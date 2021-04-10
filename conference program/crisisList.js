@@ -28,7 +28,7 @@ let committeeCountryListsCrisis = {
 }
 let committeeCrisis = $("committee-header").html()
 committeeCountryListsCrisis[committeeCrisis].forEach(function(country){
-  $("#speaker-defaults").append(`<option value="${country}"></option>`)
+  $("#speaker-defaults-crisis").append(`<option value="${country}"></option>`)
 })
 //update the html to reflect changes to the list
 function updateCrisisHTML(list){
