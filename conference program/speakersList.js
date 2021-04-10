@@ -24,6 +24,8 @@ while (committee === ""){
 }
 committeeCountryLists[committee].forEach(function(country){
   $("#speaker-defaults").append(`<option value="${country}"></option>`)
+  $("#speaker-defaults-crisis").append(`<option value="${country}"></option>`)
+})
 })
 // addEventListeners function for close out icons
 function addEventListenerClose(){
