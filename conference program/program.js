@@ -2,7 +2,7 @@
 let checkPass = prompt("Type in the password:")
 if(checkPass === null || encryptPass(checkPass)!="302AED326AED305AED122AED125AED128AED131AED"){
     alert("Wrong password. Redirecting...")
-    window.location.replace("https://pobmetmunc.github.io/site/index.html")
+    window.location.replace("https://www.pob-metmunc.com")
 }
 
 // Add Styling for button click
