@@ -18,7 +18,7 @@ let committeeCountryLists = {
 }
 let committee = ""
 while (committee === ""){
-  let input = prompt("Type in committee name exactly as one of the following (ASEAN, Congress of Vienna, ECOSOC, Interpol, NATO, Security Council, Supreme Court, UNEP, UNICEF):")
+  let input = prompt("Type in committee name exactly as one of the following (ASEAN, Congress of Vienna, ECOSOC, Interpol, NATO, Security Council, Supreme Court, UNEP, UNICEF, UNODC, WHO, DISEC, UNESCO, UNCTAD):")
   if (typeof(committeeCountryLists[input]) != 'undefined'){
     committee = input
     $("#committee-header").html(input)
