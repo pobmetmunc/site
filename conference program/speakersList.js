@@ -1,7 +1,7 @@
 // data variables
 let speakersList = [];
 let committeeCountryLists = {
-  "NATO": ['United States', 'Turkey', 'Greece', 'Ukraine', 'UK', 'France', 'Poland', 'Germany', 'Estonia', 'Latvia', 'Lithuania', 'North Macedonia', 'Bulgaria', 'Hungary', 'Romania', 'Spain', 'Italy', 'Canada', 'Denmark', 'Belgium', 'Netherlands', 'Portugal', 'Albania', 'Montenegro', 'Czech', 'Republic', 'Slovakia', 'Slovenia', 'Norway'],
+  "ASEAN": ['Vietnam’, ‘Philippines’, ‘Thailand’, 'Brunei', ‘Indonesia’, ‘Malaysia’, ‘Singapore’, ‘Laos’, ‘Myanmar’, ‘Cambodia’, ‘China’, ‘Japan’, ‘South Korea’, ‘North Korea (DPRK)’, ‘Taiwan’, ‘Bangladesh, ‘Maldives’, ‘Mongolia’, ‘Russia’, ‘India’, ‘Pakistan’, ‘Afghanistan’, ‘Nepal’, ‘Kyrgyzstan’, ‘Hong Kong’, ‘Timor-Leste’, ‘Bhutan’, ‘Tajikistan’, ‘Turkmenistan’, 'Armenia'],
   "UNCTAD":  ['Canada', 'Russia', 'United States', 'Venezuela', 'Egypt', 'China', 'UK', 'Bolivia', 'Norway', 'Saudi Arabia', 'DPRK', 'Panama', 'Nigeria', 'India', 'France', 'Denmark', 'Angola', 'Chile', 'Malaysia', 'Indonesia', 'Afghanistan', 'Australia', 'New Zealand', 'Brazil', 'Uganda', 'South Korea', 'Japan', 'Botswana', 'UAE'],
   "UNHRC":['Yemen', 'USA', 'Saudi Arabia', 'Syria', 'UK', 'Brazil', 'Venezuela', 'India', 'Nigeria', 'Philippines', 'France', 'Iran', 'Belgium', 'Italy', 'Sweden', 'Switzerland', 'Denmark', 'Germany', 'Afghanistan', 'Turkey', 'Pakistan', 'Ghana', 'Egypt', 'Bangladesh', 'Kenya', 'Japan', 'China', 'DPRK (North Korea)', 'South Korea'],
   "WHO":["India","Italy","South Korea","France","Vietnam","Australia","United Kingdom","Israel","Egypt","Czech Republic","Japan","China","United States","Ethiopia","Iran","Brazil"],
